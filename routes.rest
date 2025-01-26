@@ -9,7 +9,7 @@ GET http://localhost:3000/database/clients/67959d48f49df630cef3c90d
 Get http://localhost:3000/database/cars
 
 //Cars by ID
-Get http://localhost:3000/database/cars/67959cf5f49df630cef3c90b
+Get http://localhost:3000/database/cars/67959d10f49df630cef3c90c
 
 
 //Create HTTP Post

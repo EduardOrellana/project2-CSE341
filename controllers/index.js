@@ -37,6 +37,12 @@ baseController.getItemById = async (req, res) => {
 //Update Item by ID
 baseController.updateItem = async (req, res) => {
     //#swagger.tags = ['Update an Item by ID']
+    //#swagger.parameters['body'] = {
+    //   in: 'body',
+    //   description: 'Updated item data',
+    //   required: true,
+    //   schema: { $ref: '#/definitions/Item' }
+    // }
     try {
         const collection = req.params.Collection;
         const result = await moduler.updateItem(collection, req.params.id, req.body);
@@ -55,6 +61,12 @@ baseController.updateItem = async (req, res) => {
 //Create Item
 baseController.createItem = async (req, res) => {
     //#swagger.tags = ['Create an Item']
+    //#swagger.parameters['body'] = {
+    //   in: 'body',
+    //   description: 'Item data to create',
+    //   required: true,
+    //   schema: { $ref: '#/definitions/Item' }
+    // }
     try {
         const collection = req.params.Collection;
         const result = await moduler.createItem(collection, req.body);
