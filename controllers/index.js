@@ -4,7 +4,7 @@ let baseController = {};
 
 //Get All Item for both Databases
 baseController.getAll = async (req, res) => {
-    //#swagger.tags = ['Cars']
+    //#swagger.tags = ['All Items']
     try {
         collection = req.params.Collection;
         const result = await moduler.getAll(collection);
@@ -18,7 +18,7 @@ baseController.getAll = async (req, res) => {
 
 //Get Item by ID
 baseController.getItemById = async (req, res) => {
-    //#swagger.tags = ['Get Car by ID']
+    //#swagger.tags = ['Get an Item by ID']
     try {
         const collection = req.params.Collection;
         const result = await moduler.getItemById(collection, req.params.id);
@@ -36,7 +36,7 @@ baseController.getItemById = async (req, res) => {
 
 //Update Item by ID
 baseController.updateItem = async (req, res) => {
-    //#swagger.tags = ['Update Car by ID']
+    //#swagger.tags = ['Update an Item by ID']
     try {
         const collection = req.params.Collection;
         const result = await moduler.updateItem(collection, req.params.id, req.body);
@@ -54,7 +54,7 @@ baseController.updateItem = async (req, res) => {
 
 //Create Item
 baseController.createItem = async (req, res) => {
-    //#swagger.tags = ['Create Car']
+    //#swagger.tags = ['Create an Item']
     try {
         const collection = req.params.Collection;
         const result = await moduler.createItem(collection, req.body);
@@ -68,7 +68,7 @@ baseController.createItem = async (req, res) => {
 
 //Delete Item by ID
 baseController.deleteItem = async (req, res) => {
-    //#swagger.tags = ['Delete Car by ID']
+    //#swagger.tags = ['Delete an Item by ID']
     try {
         const collection = req.params.Collection;
         const result = await moduler.deleteItem(collection, req.params.id);
