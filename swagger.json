@@ -5,7 +5,7 @@
     "description": "API of Contacts",
     "version": "1.0.0"
   },
-  "host": "cse341-project-ycuu.onrender.com/users",
+  "host": "https://project2-cse341-sga3.onrender.com/database",
   "basePath": "/",
   "schemes": [
     "https"
