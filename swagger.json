@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "API Contacts Erick Orellana",
-    "description": "API of Contacts",
+    "description": "API of second projects",
     "version": "1.0.0"
   },
-  "host": "https://project2-cse341-sga3.onrender.com/database",
+  "host": "project2-cse341-sga3.onrender.com/database",
   "basePath": "/",
   "schemes": [
     "https"
