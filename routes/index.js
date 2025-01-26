@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
 //crud procedures
 router.use('/database', require('./collection'));
 
+//creationf of the api documentation
 router.use('/api-docs', require('./swagger'));
 
 module.exports = router;
