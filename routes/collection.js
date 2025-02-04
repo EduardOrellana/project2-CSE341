@@ -1,24 +1,35 @@
 const router = require('express').Router();
 const controller = require('../controllers/index');
+const isAuthenticated = require('../middlewares/authenticate.js');
 
+router.get('/', (req, res) => {
+    res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : 'Not logged in');
+});
 
 //Get all
-router.get('/:Collection', controller.getAll);
+router.get('/:Collection',
+    isAuthenticated,
+    controller.getAll);
 
 //Get by ID
-router.get('/:Collection/:id', controller.getItemById);
+router.get('/:Collection/:id',
+    // isAuthenticated,
+    controller.getItemById);
 
 //Update by ID
-router.put('/:Collection/:id', controller.updateItem);
+router.put('/:Collection/:id',
+    // isAuthenticated,
+    controller.updateItem);
 
 //Create
-router.post('/:Collection', controller.createItem);
+router.post('/:Collection',
+    // isAuthenticated,
+    controller.createItem);
 
 //Delete by ID
-router.delete('/:Collection/:id', controller.deleteItem);
+router.delete('/:Collection/:id',
+    isAuthenticated,
+    controller.deleteItem);
 
-router.use('/', (req, res) => {
-    res.status(202).send('Ready to CRUD the databases');
-});
 
 module.exports = router;
