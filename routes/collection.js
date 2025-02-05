@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
 
 //Get all
 router.get('/:Collection',
-    isAuthenticated,
     controller.getAll);
 
 //Get by ID
@@ -23,7 +22,7 @@ router.put('/:Collection/:id',
 
 //Create
 router.post('/:Collection',
-    // isAuthenticated,
+    isAuthenticated,
     controller.createItem);
 
 //Delete by ID
