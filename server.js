@@ -55,7 +55,7 @@ passport.deserializeUser((user, done) => {
 }); //deserialize the user data
 
 
-app.get('/github/callback',
+app.get('/callback',
     passport.authenticate('github', { failureRedirect: '/api-docs', session: false }),
     (req, res) => {
         // Successful authentication, redirect home.
