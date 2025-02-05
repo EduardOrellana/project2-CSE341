@@ -14,12 +14,12 @@ router.get('/', (req, res) => {
 router.use('/database', require('./collection'));
 
 //log in and log out.
-router.get('/login', 
-    
-    passport.authenticate('github'), (req, res) => { });
+router.get('/login',
+
+    passport.authenticate('github'), (req, res) => { res.send('Loggin...') });
 
 router.get('/logout',
-    
+
     (req, res, next) => {
         req.logout((err) => {
             if (err) {
